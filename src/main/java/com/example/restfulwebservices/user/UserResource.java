@@ -1,6 +1,7 @@
 package com.example.restfulwebservices.user;
 
 import jakarta.validation.Valid;
+import org.springframework.context.MessageSource;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -12,6 +13,8 @@ import java.util.*;
 public class UserResource {
 
    private UserDaoService service;
+
+   private MessageSource messageSource;
 
    public UserResource(UserDaoService userDaoService){
        this.service  = userDaoService;
@@ -50,4 +53,6 @@ public class UserResource {
                 .toUri();
         return ResponseEntity.created(location).build();
     }
+
+
 }
