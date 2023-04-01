@@ -18,3 +18,6 @@ The three parts of the MVC software-design pattern can be described as follows:
 3. Controller: Routes commands to the model and view parts.
 
 ![MVC3](https://user-images.githubusercontent.com/64387352/229259096-d52d2d37-353f-4789-8c75-7cae18e9dbdc.png)
+
+## Exception Handler:
+The @ExceptionHandler is an annotation used to handle the specific exceptions and sending the custom responses to the client.
