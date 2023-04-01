@@ -1,12 +1,12 @@
-package com.example.restfulwebservices;
+package com.example.restfulwebservices.user;
 
-import com.example.restfulwebservices.user.User;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Size;
 import net.minidev.json.annotate.JsonIgnore;
 
 @Entity
 public class Post {
+    protected Post(){};
     @Id
     @GeneratedValue
     private Integer Id;
@@ -18,9 +18,6 @@ public class Post {
     @JsonIgnore
     private User user;
 
-//    public  Post() {
-//
-//    }
 
     public Integer getId() {
         return Id;
@@ -48,7 +45,7 @@ public class Post {
 
     @Override
     public String toString() {
-        return "[ id = " + Id + " ,description = " + description + " ]";
+        return "Post [id=" + Id + ", description=" + description + "]";
     }
 
 
